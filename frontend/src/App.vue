@@ -1,26 +1,40 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="parent">
+    <div class="title">Progress Peserta</div>
+    <Table></Table>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Table from "./components/Table.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Table
+  },
+};
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Glory&display=swap');
+html, body {
+  font-family: 'Glory', sans-serif;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Glory', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 3rem;
+}
+
+.title {
+  margin: 1rem 2rem;
+  font-size: x-large;
+  font-weight: bold;
 }
 </style>

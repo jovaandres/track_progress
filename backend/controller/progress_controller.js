@@ -9,6 +9,12 @@ const getProgress = catchAsync(async (req, res) => {
     });
 });
 
+const postProgress = catchAsync(async (req, res) => {
+    const {name, progress} = req.body;
+    Progress.create({name, progress});
+})
+
 module.exports = {
-    getProgress
+    getProgress,
+    postProgress
 }
